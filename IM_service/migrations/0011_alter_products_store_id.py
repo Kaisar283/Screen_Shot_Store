@@ -7,13 +7,13 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('IM_servise', '0010_products_store_id'),
+        ('IM_service', '0010_products_store_id'),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='products',
             name='store_id',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_servise.store', unique=True),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_service.store', unique=True),
         ),
     ]

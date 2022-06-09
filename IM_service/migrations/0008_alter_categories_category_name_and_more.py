@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('IM_servise', '0007_alter_sub_categoryes_s_category_name'),
+        ('IM_service', '0007_alter_sub_categoryes_s_category_name'),
     ]
 
     operations = [

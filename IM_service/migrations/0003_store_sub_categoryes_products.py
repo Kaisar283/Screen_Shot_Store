@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('IM_servise', '0002_alter_categories_category_id'),
+        ('IM_service', '0002_alter_categories_category_id'),
     ]
 
     operations = [
@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('s_category_id', models.SmallIntegerField(primary_key=True, serialize=False, unique=True)),
                 ('s_category_name', models.CharField(max_length=20)),
-                ('category_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_servise.categories')),
+                ('category_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_service.categories')),
             ],
         ),
         migrations.CreateModel(
@@ -36,8 +36,8 @@ class Migration(migrations.Migration):
                 ('quantity', models.SmallIntegerField(blank=True)),
                 ('unit_price', models.IntegerField()),
                 ('sale_price', models.IntegerField()),
-                ('category_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_servise.categories')),
-                ('s_category_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_servise.sub_categoryes')),
+                ('category_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_service.categories')),
+                ('s_category_id', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='IM_service.sub_categoryes')),
             ],
         ),
     ]

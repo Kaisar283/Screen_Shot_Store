@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('IM_servise', '0003_store_sub_categoryes_products'),
+        ('IM_service', '0003_store_sub_categoryes_products'),
     ]
 
     operations = [
@@ -42,7 +42,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='products',
             name='supplier_id',
-            field=models.ForeignKey(default=3145, on_delete=django.db.models.deletion.DO_NOTHING, to='IM_servise.suppliers'),
+            field=models.ForeignKey(default=3145, on_delete=django.db.models.deletion.DO_NOTHING, to='IM_service.suppliers'),
             preserve_default=False,
         ),
     ]

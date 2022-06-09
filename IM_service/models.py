@@ -38,7 +38,7 @@ class Products(models.Model):
     supplier_id = models.ForeignKey('Suppliers', on_delete=models.DO_NOTHING)
     category_id = models.ForeignKey('Categories', on_delete=models.DO_NOTHING)
     s_category_id = models.ForeignKey('Sub_Categoryes', on_delete=models.DO_NOTHING)
-    store_id = models.ForeignKey('Store', on_delete=models.DO_NOTHING, unique=True)
+    store_id = models.ForeignKey('Store', on_delete=models.DO_NOTHING)
 
     class Meta:
         verbose_name = _('Product')
