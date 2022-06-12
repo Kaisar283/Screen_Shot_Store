@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'IM_service',
     'IM_order',
+    'IM_kassa',
 ]
 
 MIDDLEWARE = [
