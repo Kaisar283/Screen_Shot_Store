@@ -2,4 +2,7 @@
 venv
 templates
 db.sqlite3
+commands.txt
+.coverage
+htmlcov
 
