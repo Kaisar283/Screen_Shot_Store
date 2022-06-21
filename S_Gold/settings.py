@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'IM_service',
     'IM_order',
     'IM_kassa',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -79,14 +80,11 @@ WSGI_APPLICATION = 'S_Gold.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'screenshot-store',
-        'USER': 'postgres',
-        'PASSWORD': 'Almaty64',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
@@ -129,3 +127,25 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'users.NewUser'
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny', ],
+#     # 'DEFAULT_AUTHENTICATION_CLASSES': ('project_name.file_name.TokenAuthenticationCustom', ),
+#     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+#     # 'USER_DETAILS_SERIALIZER': 'users.serializers.UserModelSerializer',
+#     # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+#
+#     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+#     # "PAGE_SIZE": 15,
+#
+#     "DEFAULT_THROTTLE_CLASSES": [
+#         "rest_framework.throttling.AnonRateThrottle",
+#         "rest_framework.throttling.UserRateThrottle",
+#     ],
+#     "DEFAULT_THROTTLE_RATES": {
+#         "anon": "100000/day",
+#         "user": "100/second",
+#     },
+# }

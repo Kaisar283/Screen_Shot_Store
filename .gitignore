@@ -1,4 +1,5 @@
 .idea
 venv
 templates
+db.sqlite3
 
