@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
     'IM_service',
     'IM_order',
     'IM_kassa',
@@ -130,22 +131,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.NewUser'
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny', ],
-#     # 'DEFAULT_AUTHENTICATION_CLASSES': ('project_name.file_name.TokenAuthenticationCustom', ),
-#     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-#     # 'USER_DETAILS_SERIALIZER': 'users.serializers.UserModelSerializer',
-#     # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-#
-#     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
-#     # "PAGE_SIZE": 15,
-#
-#     "DEFAULT_THROTTLE_CLASSES": [
-#         "rest_framework.throttling.AnonRateThrottle",
-#         "rest_framework.throttling.UserRateThrottle",
-#     ],
-#     "DEFAULT_THROTTLE_RATES": {
-#         "anon": "100000/day",
-#         "user": "100/second",
-#     },
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ['rest_framework.permissions.AllowAny', ],
+    'DEFAULT_AUTHENTICATION_CLASSES': ('S_Gold.auth.CustomAuthToken', ),
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    # 'USER_DETAILS_SERIALIZER': 'users.serializers.UserModelSerializer',
+    # 'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+
+    # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    # "PAGE_SIZE": 15,
+
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": "100000/day",
+        "user": "100/second",
+    },
+}
